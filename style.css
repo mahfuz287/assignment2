@@ -1,5 +1,6 @@
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 /* header part */
 header{
@@ -18,9 +19,6 @@ header{
 }
 .navg a i{
     color: black;
-}
-a:hover{
-    color: blue;
 }
 
 /* Camera part and information */
@@ -56,11 +54,14 @@ p{
     margin-top: 50px;
     margin-left: 5%;
 }
+.camera-part:hover img{
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 2s;
+}
 
 /* populer collection part */
 .collection{
     width: 1047px;
-    height: 1662px;
     margin: auto;
 }
 .h-center{
@@ -78,7 +79,7 @@ p{
     margin: 5px 10px;
     box-shadow:2px 2px 10px 1px grey;
     padding-bottom: 5%;
-    height: 450px;
+ 
     border-radius: 10px;
     overflow: hidden;
 }
@@ -118,4 +119,103 @@ p{
 }
 .a-end i{
     padding: 5px;
+}
+/* optional part */
+.optional-part{
+    display: flex;
+    margin-top: 0%;
+}
+.optional-part img{
+    width: 50%;
+    margin: 10%;
+}
+.optional-part a{
+    text-decoration: none;
+    color: white;
+    background-color: #E02C6D;
+    padding: 5px 10px;
+}
+
+/* footer part */
+footer{
+    height: 250px;
+    background-color: #0A0826;
+    margin-bottom: 0%;
+}
+.foot-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.foot-text h3{
+    margin-top: 60px;
+    margin-bottom: 2px;
+    font-size: 30px;
+}
+.foot-text p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.foot-text p i{
+    margin: 4px 3px;
+}
+
+/* -------------
+Media Query
+---------------- */
+
+/* mocbile */
+@media only screen and (max-width:688px){
+    .navg{
+        display: none;
+    }
+    .camera-part{
+        display: block;
+    }
+    .camera-part a{
+        padding: 1px;
+        font-size: 10px;
+    }
+    .image-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .chart{
+        width: 329px;
+        height: 476px;
+    }
+    .optional-part{
+        display: block;
+
+    }
+    footer{
+        border-top: 50px;
+    }
+}
+
+/* media quary for tab */
+
+@media (min-width:688px) and (max-width:992px) {
+    .navg{
+        display: none;
+    }
+    
+    .collection{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .image-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+    }
+    .chart{
+        width: 329px;
+        height: 476px;
+    }
+    .optional-part{
+        display: block;
+
+    }
 }
